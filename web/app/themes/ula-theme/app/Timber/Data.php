@@ -27,8 +27,8 @@ class Data
 
         $context->add( [
             'menu'      => [
-                'masthead'   => new \Timber\Menu( 'masthead' ),
-                'foundation' => new \Timber\Menu( 'foundation' ),
+                'masthead'   => new \Timber\Menu( 'main-menu' ),
+                'foundation' => new \Timber\Menu( 'footer' ),
                 'cta'    => get_field('masthead', 'components')
             ],
             'style' => 'default',

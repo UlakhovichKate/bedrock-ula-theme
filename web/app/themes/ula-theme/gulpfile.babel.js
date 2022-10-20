@@ -70,7 +70,7 @@ export const copy = () => {
 const server = browserSync.create();
 export const serve = done => {
     server.init({
-        proxy: "http://wordpress-pure.local" // put your local website link here
+        proxy: "http://bedrock.local" // put your local website link here
     });
     done();
 };
