@@ -1,0 +1,13 @@
+{% if items %}
+    <section class="gallery">
+        <div class="gallery__inner">
+            <h2 class="gallery__title">This is Swiper Carousel</h2>
+            <div class="gallery__description">Swiper component</div>
+
+            {% include 'components/pages/slider.twig' with {
+                class: class,
+                items: items
+            } %}
+        </div>
+    </section>
+{% endif %}

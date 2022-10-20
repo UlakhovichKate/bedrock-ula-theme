@@ -1,0 +1,14 @@
+{% extends "components/base/base.twig" %}
+
+{% block content %}
+	<div class="c-page">
+		<article class="c-page__inner c-page--{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="c-page__container">
+				<h1 class="c-page__title">{{post.title}}</h1>
+				<div class="c-page__content">
+					{{ post.content }}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

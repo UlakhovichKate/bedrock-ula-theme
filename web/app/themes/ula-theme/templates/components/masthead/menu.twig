@@ -1,0 +1,15 @@
+{% if menu %}
+	<ul class="{{ class }}">
+	{% for item in items %}
+		<li class="{{ class }}__item {{ item.classes | join(' ') }}">
+			<a class="{{ class }}__link" target="{{ item.target }}" href="{{ item.link }}" >{{ item.title }}</a>
+			{% if item.children %}
+				{% include "components/masthead/menu.twig" with {
+					'items': item.children,
+					'class': class ~ '__child'
+				} %}
+			{% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}

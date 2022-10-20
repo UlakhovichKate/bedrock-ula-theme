@@ -1,0 +1,26 @@
+.c-single {
+    &__inner {
+        max-width: var(--reading);
+        margin: auto;
+        padding: 120px 20px 60px;
+    }
+
+    &__title {
+        font-size: 32px;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-family: var(--font-playfair);
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    a {
+        color: var(--primary);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

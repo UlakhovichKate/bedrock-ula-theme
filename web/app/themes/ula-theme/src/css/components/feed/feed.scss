@@ -1,0 +1,9 @@
+.feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px 30px;
+
+    @media all and (max-width: 991px) {
+        grid-template-columns: 1fr;
+    }
+}

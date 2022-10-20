@@ -1,0 +1,33 @@
+<div class="footer">
+    <div class="footer__inner">
+
+        <div class="footer__columns">
+            <div class="footer__column-one">
+                <div class="footer__column-inner">
+                    <div class="footer__menu">
+                        {% for item in menu.foundation.items %}
+                            <a href="{{ item.link }}" class="footer__menu-link {{ item.classes | join(' ')}}">
+                                {{ item.name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+
+                    <div class="footer__bar">
+                        <div class="footer__bar-container">
+                            <div class="footer__bar-copyrights">
+                                Copyright © {{ 'now'|date('Y') }} {{ site.name }}.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__column-two">
+                {% include 'components/pages/newsletter.twig' %}
+            </div>
+            <div class="footer__column-three">
+                {% include 'objects/logo.twig' %}
+            </div>
+        </div>
+
+    </div>
+</div>

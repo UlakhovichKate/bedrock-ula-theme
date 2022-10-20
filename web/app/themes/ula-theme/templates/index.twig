@@ -1,0 +1,11 @@
+{% extends "components/base/base.twig" %}
+
+{% block content %}
+	<h2>{{ foo }}</h2>
+	<p>{{ qux }}</p>
+	{% for post in posts %}
+		{% include ['components/tease/tease-'~post.post_type~'.twig', 'components/tease/tease.twig'] %}
+	{% endfor %}
+
+	{% include 'components/partial' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

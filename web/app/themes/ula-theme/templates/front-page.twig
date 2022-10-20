@@ -1,0 +1,25 @@
+{% extends "components/base/base.twig" %}
+
+{% block content %}
+
+	{% include 'components/pages/hero.twig' %}
+
+	{% include 'components/pages/gallery.twig' with {
+		items: slider,
+		class: 'slider'
+	} %}
+
+	<section class="home-posts">
+		<div class="home-posts__inner">
+
+			<h2 class="home-posts__title">Latest posts</h2>
+			<div class="home-posts__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+
+			{% include 'components/feed/feed.twig' with {
+				class: 'c-home',
+				items: posts
+			} %}
+		</div>
+	</section>
+
+{% endblock %}

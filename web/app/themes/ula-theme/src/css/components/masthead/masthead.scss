@@ -1,0 +1,20 @@
+.masthead {
+    .burger {
+        &__btn {
+            display: none;
+
+            @media all and (max-width: 991px) {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                z-index: 5;
+
+                &[aria-expanded="false"] + .menu {
+                    visibility: hidden;
+                    transform: translateX(100%);
+                }
+            }
+        }
+    }
+}

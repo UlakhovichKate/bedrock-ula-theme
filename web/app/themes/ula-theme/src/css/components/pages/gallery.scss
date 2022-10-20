@@ -1,0 +1,18 @@
+.gallery {
+    &__inner {
+        max-width: var(--desktop);
+        padding: 60px 20px;
+        margin: auto;
+    }
+
+    &__title {
+        font-family: var(--font-playfair);
+        text-align: center;
+    }
+
+    &__description {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+}

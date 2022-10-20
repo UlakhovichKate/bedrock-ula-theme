@@ -1,0 +1,13 @@
+.o-logo {
+    &__title {
+        position: absolute;
+        top: -500px;
+        left: -500px;
+    }
+
+    &__link {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

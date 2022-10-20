@@ -1,0 +1,19 @@
+.c-home {
+    &__inner {
+        max-width: var(--desktop);
+        margin: auto;
+        padding: 120px 20px 60px;
+    }
+
+    &__title {
+        font-size: 32px;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-family: var(--font-playfair);
+    }
+
+    &__items {
+
+    }
+
+}

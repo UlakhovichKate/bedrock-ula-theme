@@ -1,0 +1,27 @@
+{% extends "components/tease/tease.twig" %}
+
+{% block content %}
+	<h3 class="tease__title"><a href="{{post.link}}">{{post.title}}</a></h3>
+
+	<div class="tease__category">
+		{% for term in post.terms('category') %}
+			<a href="{{ term.link }}" class="tease__category-name">{{ term.name }}</a>{{ loop and not loop.last ? ' ' : '' }}
+		{% endfor %}
+	</div>
+
+	<p class="tease__description">{{post.preview.length(25)}}</p>
+
+	{% if post.thumbnail.src %}
+		<img class="tease__img" src="{{post.thumbnail.src}}" />
+	{% endif %}
+
+	{% include 'objects/button.twig' with {
+		el: 'a',
+		cta: 'read more',
+		link: post.link,
+		style: 'solid',
+		class: 'tease__btn',
+		th: 'primary'
+	} %}
+
+{% endblock %}

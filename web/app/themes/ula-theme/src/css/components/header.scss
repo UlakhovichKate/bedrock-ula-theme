@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    background-color: var(--white);
+    box-shadow: 0 -5px 10px 5px rgb(0 0 0 / 9%);
+    z-index: 5;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        max-width: var(--desktop);
+        width: 100%;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    &__btn {
+        margin-left: auto;
+    }
+}

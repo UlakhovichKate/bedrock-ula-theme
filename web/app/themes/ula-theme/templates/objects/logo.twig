@@ -1,0 +1,22 @@
+{#
+* Logo
+* ---------
+* @package objects
+#}
+
+<section class="o-logo o-logo--{{ style }} {{ class }}" itemscope itemtype="http://schema.org/Organization" id="js-logo--{{ style }}">
+
+    {% if nolink %}
+        <span class="o-logo__span">
+            <img src="{{ theme.uri }}/dist/images/logo.png" alt={{ site.name }}>
+{#            {{ source('dist/images/logo.png') }}#}
+        </span>
+    {% else %}
+        <a class="o-logo__link" itemprop="url" rel="home" href="{{ site.link }}">
+            <img src="{{ theme.uri }}/dist/images/logo.png" alt="kate ula code">
+{#            {{ source('dist/images/logo.png') }}#}
+        </a>
+    {% endif %}
+
+    <h1 class="o-logo__title">{{ site.name }}</h1>
+</section>

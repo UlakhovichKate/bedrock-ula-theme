@@ -1,0 +1,33 @@
+<form class="c-form js-newsletter-form">
+
+    <div class="c-form__inner">
+        <div class="c-form__field-group">
+            <div class="c-form__input-group">
+                <input class="c-form__input c-form__input--name" type="text" name="name" placeholder="Name:" required autocomplete="off" value="">
+            </div>
+            <div class="c-form__input-group">
+                <input class="c-form__input c-form__input--email" type="email" name="email" placeholder="Email:" required autocomplete="off" value="">
+            </div>
+        </div>
+        <div class="c-form__terms">
+            <label class="c-form__label c-form__label--terms">
+                <input class="c-form__input c-form__input--terms" type="checkbox" name="terms" id="newsletter-terms--{{ class }}" required>
+                <span class="c-form__input--checkmark"></span>
+                <span>For further information on how your information is used, including disclosure to third parties, how we maintain security of your information and your rights in relation to the information we hold about you, please see our <a href="{{ terms }}" >Privacy Policy</a></span>
+            </label>
+        </div>
+
+        {% include 'objects/button.twig' with {
+            el: 'button',
+            cta: 'Submit',
+            style: 'solid',
+            class: 'c-form__submit js-newsletter-text',
+            th: 'secondary'
+        } %}
+
+        {{ fn('wp_nonce_field', 'mailchimp_subscribe', 'mailchimp-subscribe', true, false) }}
+    </div>
+
+</form>
+
+

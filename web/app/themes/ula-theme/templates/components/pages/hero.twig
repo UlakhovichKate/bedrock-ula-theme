@@ -1,0 +1,25 @@
+<div class="hero">
+    <div class="hero__media"><img src="{{ theme.uri }}/dist/images/PHSQUAT115054006.jpg" alt="baltic sea" class="hero__img"></div>
+    <div class="hero__inner">
+        <div class="hero__content">
+
+            {% if post.meta("hero").title %}
+                <h2 class="hero__title">{{ post.meta("hero").title }}</h2>
+            {% endif %}
+
+            {% if post.meta("hero").description %}
+                <div class="hero__description">{{ post.meta("hero").description }}</div>
+            {% endif %}
+
+            {% include 'objects/button.twig' with {
+                el: 'a',
+                cta: 'CTA button',
+                link: site.link,
+                style: 'solid',
+                class: 'hero__btn',
+                th: 'primary'
+            } %}
+
+        </div>
+    </div>
+</div>

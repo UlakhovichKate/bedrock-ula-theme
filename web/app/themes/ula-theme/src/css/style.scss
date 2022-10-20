@@ -1,0 +1,78 @@
+@import './node_modules/swiper/swiper.scss';
+@import './node_modules/swiper/modules/pagination/pagination';
+@import './node_modules/swiper/modules/scrollbar/scrollbar';
+@import './node_modules/swiper/modules/effect-fade/effect-fade';
+@import './node_modules/swiper/modules/lazy/lazy';
+
+@import 'components/masthead/menu';
+@import 'components/masthead/masthead';
+@import "components/header";
+@import "components/page";
+@import "components/home";
+@import "components/footer/footer";
+@import "components/slider";
+@import "components/single";
+
+@import "components/tease/tease--post";
+@import "components/feed/feed";
+
+@import "components/pages/hero";
+@import "components/pages/gallery";
+@import "components/pages/home-posts";
+@import "components/pages/newsletter";
+
+@import "components/global/form";
+
+@import "objects/button";
+@import "objects/logo";
+
+:root {
+    --primary  : #8c270e;
+    --secondary: #f5c0c0;
+    --white    : #fff;
+    --black    : #111;
+
+    --desktop : 1440px;
+    --netbook : 1200px;
+    --tablet  : 991px;
+    --reading : 664px;
+
+    --font-inter : 'Inter', sans-serif;
+    --font-playfair : 'Playfair Display', serif;
+}
+
+$white: var(--white);
+$black: var(--black);
+$primary: var(--primary);
+
+$font-inter: var(--font-inter);
+$font-playfair: var(--font-playfair);
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    color: $black;
+    font-family: $font-inter;
+    font-size: 16px;
+}
+
+main {
+    flex-basis: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+footer {
+    background-color: $primary;
+}

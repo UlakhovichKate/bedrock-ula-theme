@@ -1,0 +1,22 @@
+{% extends "components/base/base.twig" %}
+
+{% block content %}
+
+	<div class="c-page">
+		<article class="c-page__inner c-page--{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="c-page__container">
+				<h2 class="c-page__title">Sorry, this page doesn't exists</h2>
+
+				{% include 'objects/button.twig' with {
+					el: 'a',
+					cta: 'back to the homepage',
+					link: site.link,
+					style: 'solid',
+					class: 'c-page__btn',
+					th: 'primary'
+				} %}
+
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

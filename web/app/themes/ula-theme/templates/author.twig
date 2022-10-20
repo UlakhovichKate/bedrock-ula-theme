@@ -1,0 +1,16 @@
+{% extends "components/base/base.twig" %}
+
+{% block content %}
+	<div class="c-home">
+		<div class="c-home__inner c-home--{{post.post_type}}" id="post-{{post.ID}}">
+			<h2 class="c-home__title">Author: {{ author }}</h2>
+
+			{% include 'components/feed/feed.twig' with {
+				class: 'c-home',
+				items: posts
+			} %}
+
+		</div>
+	</div><!-- /content-wrapper -->
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<!-- Slider main container -->
+<div class="swiper slider {{ class }}">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper slider__items">
+        <!-- Slides -->
+        {% for item in items %}
+            <div class="swiper-slide slider__item">
+                <img src="{{ Image(item) }}" class="slider__img">
+            </div>
+        {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination slider__pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev slider__btn {{ class }}__btn--prev"><span class="{{ class }}__icon"> < </span></div>
+    <div class="swiper-button-next slider__btn {{ class }}__btn--next"><span class="{{ class }}__icon"> > </span></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar slider__scrollbar"></div>
+</div>

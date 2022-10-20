@@ -1,0 +1,19 @@
+.home-posts {
+    &__inner {
+        max-width: var(--desktop);
+        margin: auto;
+        padding: 60px 20px;
+    }
+
+    &__title {
+        font-family: var(--font-playfair);
+        font-size: 32px;
+        text-align: center;
+    }
+
+    &__description {
+        max-width: var(--tablet);
+        margin: 30px auto 60px;
+        text-align: center;
+    }
+}

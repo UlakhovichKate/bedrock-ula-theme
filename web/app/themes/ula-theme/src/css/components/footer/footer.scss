@@ -1,0 +1,38 @@
+.footer {
+    &__inner {
+        max-width: var(--desktop);
+        margin: auto;
+        padding: 50px 20px;
+        color: var(--white);
+    }
+
+    &__columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 60px;
+
+        @media all and (max-width: 991px) {
+            flex-direction: column;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__menu-link {
+        color: var(--white);
+
+        &:hover,
+        &.current-menu-item {
+            opacity: 0.7;
+        }
+    }
+
+    &__bar {
+        margin-top: 60px;
+    }
+}
