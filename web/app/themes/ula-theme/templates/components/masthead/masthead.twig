@@ -18,6 +18,10 @@
             </template>
         </nav><!-- #nav -->
 
+        {% include 'components/search/search-input.twig' with {
+            class: 'header__search'
+        } %}
+
         {% include 'objects/button.twig' with {
             el: 'a',
             cta: 'CTA button',

@@ -1,0 +1,17 @@
+<aside class="search-input {{ class }}">
+    <div class="search-input__container">
+        <form class="search-input__form" action="{{ site.url }}" method="get">
+            <input type="text" class="search-input__text" placeholder="Search..." name="s" value="{{ query }}" autocomplete="off">
+
+            <div class="search-input__inputs">
+                {% include 'objects/button.twig' with {
+                    el: 'button',
+                    cta: 'Search',
+                    style: 'solid',
+                    class: 'search-input__submit',
+                    th: 'primary'
+                } %}
+            </div>
+        </form>
+    </div>
+</aside>

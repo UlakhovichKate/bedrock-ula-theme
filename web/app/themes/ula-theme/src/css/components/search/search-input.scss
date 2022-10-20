@@ -1,0 +1,22 @@
+.search-input {
+    &__form {
+        display: flex;
+    }
+
+    &__text {
+        font-size: 14px;
+        padding: 6px 10px 6px;
+        outline: none;
+        border: 1px solid var(--primary);
+        border-radius: 4px;
+
+        &:hover,
+        &:focus {
+            border-color: var(--secondary);
+        }
+    }
+
+    &__submit {
+        margin-left: -4px;
+    }
+}

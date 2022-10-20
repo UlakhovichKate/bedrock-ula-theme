@@ -33,5 +33,15 @@
 
     &__btn {
         margin-left: auto;
+
+        @media all and (max-width: 991px) {
+            margin-left: 0;
+        }
+    }
+
+    &__search {
+        @media all and (max-width: 991px) {
+            display: none;
+        }
     }
 }
