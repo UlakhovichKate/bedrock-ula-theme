@@ -34,6 +34,7 @@
     "build": "gulp build --prod"
   },
   "dependencies": {
+    "headroom.js": "^0.12.0",
     "swiper": "^8.4.4"
   }
 }

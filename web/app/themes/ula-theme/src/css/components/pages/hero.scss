@@ -4,11 +4,11 @@
     &__inner {
         position: relative;
         max-width: var(--netbook);
-        margin: 60px auto 0;
+        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height:  calc(100vh - 60px);
+        height:  100vh;
         padding: 0 20px;
     }
 
@@ -17,7 +17,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: calc(100vh - 60px);
+        height: 100vh;
         overflow: hidden;
 
         &::after {
