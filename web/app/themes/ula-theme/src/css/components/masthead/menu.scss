@@ -42,6 +42,14 @@
     &__child__link {
         color: var(--primary);
         text-decoration: none;
+
+        .home .header.is--top .menu & {
+            color: var(--white);
+        }
+
+        .home .header.is--not-top .menu & {
+            color: var(--primary);
+        }
     }
 
     &__child {

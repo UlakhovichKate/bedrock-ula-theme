@@ -56,6 +56,35 @@ class Functions
         }));
 
 
+        // Map Markers
+        $twig->addFunction( new Twig\TwigFunction( 'mapMarkers', function (
+            $location
+        ) {
+            $meta = get_field('contact_info');
+            $address = $meta['address'];
+
+//            $marker = [
+//                'ID' => $location->ID,
+//                'name' => $location->title,
+//                'lat' => $address['lat'],
+//                'lng' => $address['lng'],
+//                'address' => $address['address'],
+//                'state' => $address['state'],
+//            ];
+            $marker = [
+                'ID' => 12,
+                'name' => 'Australian Red Cross Lifeblood',
+                'lat' => '53.339688',
+                'lng' => '-6.236688',
+                'address' => '100/154 Batman St, West Melbourne VIC 3003, Australia',
+                'state' => '',
+            ];
+
+            return htmlspecialchars(wp_json_encode($marker));
+
+        } ) );
+
+
         return $twig;
     }
 
