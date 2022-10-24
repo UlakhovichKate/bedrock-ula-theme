@@ -2,15 +2,17 @@
 
 {% block content %}
 	<div class="c-page">
-		<article class="c-page__inner c-page--{{post.post_type}}" id="post-{{post.ID}}">
+		<article class="c-page__inner c-page--{{ post.post_type }}" id="post-{{ post.ID }}">
 			<section class="c-page__container">
-				<h2 class="c-page__title">{{post.title}}</h2>
+				<h2 class="c-page__title lalala">{{ post.title }}</h2>
 				<div class="c-page__content">
 					{{ post.content }}
 				</div>
 
 				{% include "components/partial/map.twig" %}
 			</section>
+
+			{% include "sidebar.twig" %}
 		</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}

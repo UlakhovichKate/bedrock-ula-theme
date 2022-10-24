@@ -22,6 +22,8 @@
  */
 
 
+use Timber\Timber;
+
 defined( 'ABSPATH' ) || exit;
 
 $context = new \Ula\Timber\Context( [
@@ -29,5 +31,8 @@ $context = new \Ula\Timber\Context( [
     'pages/page--' . $post->post_name . '.twig',
     'page.twig'
 ] );
+
+
+$context->add('sidebar', Timber::get_sidebar('sidebar.php'));
 
 $context->render();

@@ -1,8 +1,16 @@
 .c-page {
     &__inner {
-        max-width: var(--desktop);
+        max-width: var(--netbook);
         margin: auto;
         padding: 120px 20px 60px;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        grid-gap: 60px;
+
+        @media all and (max-width: 991px) {
+            grid-template-columns: 1fr;
+            grid-gap: 100px;
+        }
     }
 
     &__title {
@@ -19,4 +27,8 @@
             text-decoration: none;
         }
     }
+}
+
+.widget {
+    margin-bottom: 60px;
 }
