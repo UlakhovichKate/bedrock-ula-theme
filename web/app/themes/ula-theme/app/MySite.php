@@ -72,6 +72,13 @@ class MySite extends Timber\Site {
         );
 
         add_theme_support( 'menus' );
+
+
+        register_nav_menus(array(
+            'masthead'    => 'Main Menu',    //Название месторасположения меню в шаблоне
+            'footer' => 'Footer Menu',      //Название другого месторасположения меню в шаблоне
+            'aside' => 'Aside Menu'
+        ));
     }
 
 }
