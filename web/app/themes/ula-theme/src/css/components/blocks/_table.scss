@@ -1,0 +1,23 @@
+.wp-block-table {
+    table {
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 5px;
+        border-bottom: 1px solid var(--primary);
+        border-left: 1px solid var(--primary);
+        border-top: 1px solid var(--primary);
+
+        &:last-of-type {
+            border-right: 1px solid var(--primary);
+        }
+    }
+
+    figcaption {
+        padding-top: 15px;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+}

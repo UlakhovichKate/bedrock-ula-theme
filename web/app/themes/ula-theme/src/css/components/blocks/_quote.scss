@@ -1,0 +1,20 @@
+.wp-block-quote {
+    p {
+        margin-bottom: 15px;
+        font-size: 24px;
+
+        &::before {
+            content: '“';
+            padding-right: 20px;
+            font-size: 64px;
+            line-height: 1;
+            color: var(--primary);
+        }
+    }
+
+    cite {
+        display: block;
+        padding: 0 0 0 45px;
+        font-size: 12px;
+    }
+}
