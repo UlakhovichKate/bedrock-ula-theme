@@ -1,0 +1,20 @@
+{#
+* Modal Content
+* ---------
+* @package components/partial
+#}
+{% extends "components/partial/modal.twig" %}
+
+{% block modalContent %}
+
+    <div class="c-modal__header">
+        <h3>Modal title</h3>
+
+    </div>
+
+    <div class="c-modal__content">
+
+        {% include "components/forms/form-newsletter.twig" %}
+
+    </div>
+{% endblock %}

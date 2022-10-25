@@ -4,12 +4,29 @@
 	<div class="c-page">
 		<article class="c-page__inner c-page--{{ post.post_type }}" id="post-{{ post.ID }}">
 			<section class="c-page__container">
-				<h2 class="c-page__title lalala">{{ post.title }}</h2>
+				<h2 class="c-page__title">{{ post.title }}</h2>
 				<div class="c-page__content">
 					{{ post.content }}
 				</div>
 
-				{% include "components/partial/map.twig" %}
+				<section class="c-page__modal">
+					{% include 'objects/button.twig' with {
+						el: 'button',
+						class: 'js-modal-open',
+						style: 'solid',
+						cta: 'open modal',
+						meta: 'data-modal-open="js-modal-form"',
+						th: 'primary'
+					} %}
+
+					{% include "components/partial/modal--form.twig" with {
+						template : 'form',
+						hook     : 'js-modal-form',
+					}%}
+
+				</section>
+
+{#				{% include "components/partial/map.twig" %}#}
 			</section>
 
 			{% include "sidebar.twig" %}

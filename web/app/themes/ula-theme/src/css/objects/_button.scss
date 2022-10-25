@@ -60,10 +60,12 @@
     &--bare {
         &.primary {
             color: var(--primary);
+            background-color: transparent;
+            border: none;
 
             &:hover,
             &:focus {
-                border-bottom: 1px solid var(--primary);
+                color: var(--secondary);
             }
         }
     }

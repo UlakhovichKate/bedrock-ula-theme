@@ -1,0 +1,34 @@
+{#
+* Modal
+* ---------
+* @package components/partial
+#}
+
+<div class="c-modal--{{ template }} is-closed" tabindex="-1" data-modal="{{ hook }}">
+
+    <div class="c-modal__masthead">
+        {% include 'objects/logo.twig' with {
+            component: 'c-masthead',
+            style    : 'masthead',
+            wordmark : true,
+        } %}
+
+        {% include 'objects/button.twig' with {
+            el: 'button',
+            class: 'js-modal-close c-modal__btn',
+            style: 'bare',
+            cta: 'x',
+            meta: 'data-modal-close="' ~ hook ~'"',
+            th: 'primary'
+        } %}
+    </div>
+
+    <div class="c-modal__inner">
+
+        {% block modalContent %}
+
+        {% endblock %}
+
+    </div>
+
+</div>
