@@ -1,0 +1,37 @@
+.wp-block-cover {
+    position: relative;
+
+    &__inner-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image-background {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        object-fit: cover;
+    }
+
+    .has-small-font-size {
+        font-size: 13px;
+    }
+
+    .has-medium-font-size {
+        font-size: 20px;
+    }
+
+    .has-large-font-size {
+        font-size: 36px;
+    }
+
+    .has-x-large-font-size {
+        font-size: 42px;
+    }
+}

@@ -91,3 +91,35 @@ new Ula\Timber\Data;
 new Ula\WP\Guttenburg;
 
 
+Ula\WP\Register::taxonomies( [
+    [
+        'plural'       => __( 'Education Categories', 'lydia' ),
+        'singular'     => __( 'Education Category', 'lydia' ),
+        'key'          => 'education_cat',
+        'hierarchical' => true,
+        'post_types'   => ['education'],
+        'rewrite'      => [
+            'slug'       => 'education-hub',
+            'with_front' => false
+        ],
+        'show_in_nav_menus' => true,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+    ]
+] );
+
+Ula\WP\Register::post_types( [
+    [
+        'plural'       => __( 'Education', 'lydia' ),
+        'singular'     => __( 'Education', 'lydia' ),
+        'key'          => 'education',
+        'hierarchical' => false,
+        'has_archive'  => false,
+        'public'       => true,
+        'show_in_rest' => true,
+        'supports'     => ['title', 'thumbnail', 'excerpt', 'editor', 'custom-fields'],
+        'menu_icon'    => 'dashicons-welcome-learn-more',
+        'rewrite_slug' => 'education-hub/%education_cat%',
+    ]
+]);

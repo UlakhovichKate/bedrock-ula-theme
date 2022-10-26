@@ -1,0 +1,21 @@
+.wp-block-image {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+.wp-block-gallery {
+    margin: 0;
+
+    &.columns-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    &.is-cropped {
+        object-fit: cover;
+    }
+}

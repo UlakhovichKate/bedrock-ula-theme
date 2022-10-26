@@ -4,6 +4,14 @@
 
 	{% include 'components/pages/hero.twig' %}
 
+	<div class="content">
+		<div class="content__inner">
+			{{ post.post_content }}
+
+			{{ function('do_shortcode', '[subcatoftax category="education_cat"]') }}
+		</div>
+	</div>
+
 	{% include 'components/pages/gallery.twig' with {
 		items: slider,
 		class: 'slider'
