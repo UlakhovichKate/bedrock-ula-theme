@@ -3,6 +3,7 @@ class MySite extends Timber\Site {
 
     /** Add timber support. */
     public function __construct() {
+        //add_action( 'acf/init', array( $this, 'my_acf_op_init' ), 5 ); // only with pro
         add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
         add_action( 'init', array( $this, 'register_post_types' ) );
         add_action( 'init', array( $this, 'register_taxonomies' ) );
@@ -11,13 +12,28 @@ class MySite extends Timber\Site {
         add_filter( 'auto_update_theme', '__return_false' );
         parent::__construct();
     }
-    /** This is where you can register custom post types. */
-    public function register_post_types() {
 
-    }
-    /** This is where you can register custom taxonomies. */
-    public function register_taxonomies() {
 
+    /** only with pro */
+    public function my_acf_op_init() {
+
+        // Check function exists.
+        if( function_exists('acf_add_options_page') ) {
+
+            // Add parent.
+            $parent = acf_add_options_page(array(
+                'page_title'  => __('Theme General Settings'),
+                'menu_title'  => __('Theme Settings'),
+                'redirect'    => false,
+            ));
+
+            // Add sub page.
+            $child = acf_add_options_page(array(
+                'page_title'  => __('Social Settings'),
+                'menu_title'  => __('Social'),
+                'parent_slug' => $parent['menu_slug'],
+            ));
+        }
     }
 
 
