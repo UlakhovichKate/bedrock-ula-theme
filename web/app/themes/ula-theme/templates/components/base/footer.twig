@@ -26,6 +26,14 @@
             </div>
             <div class="footer__column-three">
                 {% include 'objects/logo.twig' %}
+
+                <div class="contact">
+                    <h3 class="contact__title">{{ contacts.title }}</h3>
+                    <div class="contact__text">{{ contacts.address }}</div>
+                    <div class="contact__text">
+                        <a href="{{ contacts.email }}" class="contact__link footer__menu-link">{{ contacts.email }}</a>
+                    </div>
+                </div>
             </div>
         </div>
 

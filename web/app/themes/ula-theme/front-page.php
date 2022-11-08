@@ -31,5 +31,6 @@ $slider = [];
 array_push($slider, $post->slider_slide_1, $post->slider_slide_2, $post->slider_slide_3);
 
 $context->add('slider', $slider);
+$context->add('contacts', get_field('contacts', $post));
 
 $context->render();
