@@ -4,8 +4,8 @@
 
 	{% include 'components/pages/hero.twig' %}
 
-	<div class="content">
-		<div class="content__inner">
+	<div class="c-page">
+		<div class="c-page__inner c-page__inner--no-sidebar">
 			{{ post.post_content }}
 
 			{{ function('do_shortcode', '[subcatoftax category="education_cat"]') }}

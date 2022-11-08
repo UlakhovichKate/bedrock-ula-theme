@@ -7,6 +7,10 @@
         grid-template-columns: 2.5fr 1fr;
         grid-gap: 60px;
 
+        &--no-sidebar {
+            display: block;
+        }
+
         @media all and (max-width: 991px) {
             grid-template-columns: 1fr;
             grid-gap: 100px;

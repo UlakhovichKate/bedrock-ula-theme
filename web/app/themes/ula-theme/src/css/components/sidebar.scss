@@ -1,0 +1,8 @@
+.sidebar {
+    position: relative;
+
+    &__inner {
+        position: sticky;
+        top: 60px;
+    }
+}
